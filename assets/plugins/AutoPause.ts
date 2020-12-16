@@ -1,9 +1,14 @@
+import MediaPlayer from "../MediaPlayer";
+
 class AutoPause {
+  private player: MediaPlayer;
+
   constructor() {
     this.handleIntersection = this.handleIntersection.bind(this)
     this.handleVisibilityChange = this.handleVisibilityChange.bind(this)
   }
-  run(player) {
+
+  run(player: MediaPlayer) {
     this.player = player;
     const observer = new IntersectionObserver(this.handleIntersection, {
       threshold: 0.25
@@ -13,7 +18,7 @@ class AutoPause {
     document.addEventListener('visibilitychange', this.handleVisibilityChange);
   }
 
-  handleVisibilityChange() {
+  private handleVisibilityChange() {
     const isVisible = document.visibilityState;
 
     if(isVisible === 'visible'){
@@ -23,9 +28,8 @@ class AutoPause {
     }
   }
 
-  handleIntersection(entries) {
+  private handleIntersection(entries: IntersectionObserverEntry[]) {
     const entry = entries[0];
-
     if(entry.isIntersecting){
       this.player.play();
     } else {

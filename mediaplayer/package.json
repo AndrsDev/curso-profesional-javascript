@@ -1,0 +1,16 @@
+{
+  "name": "@andrsdev/mediaplayer",
+  "version": "0.1.0",
+  "description": "Platzi mediaplayer",
+  "main": "lib/MediaPlayer.js",
+  "scripts": {
+    "build": "tsc src/**/*.ts src/plugins/*.ts src/plugins/**/*.ts --outDir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andrés Sanabria | andrs.dev@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}

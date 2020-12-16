@@ -1,7 +1,7 @@
-import MediaPlayer from './MediaPlayer';
-import AutoPlay from './plugins/AutoPlay';
-import AutoPause from './plugins/AutoPause';
-import AdsPlugin from './plugins/Ads';
+import MediaPlayer from '../../mediaplayer/src/MediaPlayer';
+import AutoPlay from '../../mediaplayer/src/plugins/AutoPlay';
+import AutoPause from '../../mediaplayer/src/plugins/AutoPause';
+import AdsPlugin from '../../mediaplayer/src/plugins/Ads';
 
 const video = document.querySelector('video');
 const player = new MediaPlayer({
